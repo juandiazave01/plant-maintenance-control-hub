@@ -43,3 +43,5 @@ Static site — no build step required. Files:
 ## Local preview
 
 Open `index.html` directly in a browser — no server needed.
+
+
