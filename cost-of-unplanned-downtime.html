@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Real Cost of Unplanned Downtime — Reliability &amp; Controls Insight</title>
+<meta name="description" content="The number on the downtime report is never the real number. A framework for finding the costs that don't show up in the maintenance log.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-top">
+    <span>Field notes on plant reliability &amp; industrial control</span>
+    <span>Vol. 01</span>
+  </div>
+  <div class="masthead-main">
+    <a href="../index.html" class="wordmark">Reliability <span class="wordmark-accent">&amp;</span> Controls Insight</a>
+    <nav class="masthead-nav">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#maintenance">Maintenance</a>
+      <a href="../index.html#controls">Controls &amp; SCADA</a>
+      <a href="../index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header">
+  <span class="article-tag tag-reliability">Reliability</span>
+  <h1 class="article-title">The Real Cost of Unplanned Downtime</h1>
+  <p class="article-dek">
+    The number on the downtime report is never the real number. Most of the actual cost never makes
+    it onto that report at all.
+  </p>
+  <div class="article-byline">
+    <span>Juan Díaz</span>
+    <span>·</span>
+    <span>Reliability</span>
+    <span>·</span>
+    <span>6 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>
+    Ask most plants what a breakdown cost them and you'll get a tidy number: hours down, multiplied by
+    a standard rate, maybe with parts and overtime labor added on top. It's the number that goes in
+    the CMMS, gets rolled up into a monthly report, and eventually shapes next year's maintenance
+    budget.
+  </p>
+  <p>
+    It's also almost always wrong — not because anyone is hiding something, but because the downtime
+    log was never designed to capture the full cost in the first place. It captures what's easy to
+    measure, not what actually happened to the business.
+  </p>
+
+  <h2>What the downtime log actually records</h2>
+  <p>
+    A typical downtime entry answers a narrow question: how long was the line down, and what caused
+    it. That's genuinely useful for tracking failure frequency and duration. But it treats the
+    breakdown as if it ended the moment the line restarted — and in most plants, it doesn't.
+  </p>
+
+  <h2>The costs that don't make it onto the report</h2>
+  <p>
+    A few categories of cost consistently get left out, and they're often larger than the direct
+    downtime hours themselves:
+  </p>
+  <ul>
+    <li><strong>Restart quality loss.</strong> The first units off a line after an unplanned stop are
+      disproportionately likely to be scrap or rework — temperatures, tensions, and alignments need
+      to re-stabilize, and that product rarely gets tracked back to the breakdown that caused it.</li>
+    <li><strong>Missed delivery commitments.</strong> A breakdown that pushes an order past its ship
+      date can trigger expedited freight, customer penalties, or reputational cost that never touches
+      a maintenance budget line.</li>
+    <li><strong>Overtime and schedule disruption.</strong> Making up lost production usually means
+      overtime, weekend runs, or pulling technicians off planned work — which quietly creates the next
+      round of deferred maintenance.</li>
+    <li><strong>Stress on secondary equipment.</strong> An abrupt stop can put upstream or downstream
+      equipment through an abnormal cycle — a sudden load reversal, a cold restart it wasn't designed
+      for — accelerating wear that shows up as an "unrelated" failure weeks later.</li>
+    <li><strong>Rushed repairs and safety exposure.</strong> Pressure to get a line back up fast is
+      exactly the condition under which shortcuts and injuries happen. That risk doesn't show up as a
+      dollar figure until it does.</li>
+  </ul>
+
+  <p class="pull-quote">
+    The visible cost of downtime is the tip of a much larger number that never gets filed under
+    "maintenance."
+  </p>
+
+  <div class="stat-callout">
+    <div class="stat">
+      <span class="stat-value">1x</span>
+      <span class="stat-label">Direct cost — hours × rate, what gets reported</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">?x</span>
+      <span class="stat-label">Restart scrap, missed ship dates, secondary wear — rarely reported</span>
+    </div>
+  </div>
+
+  <h2>Why this changes how reliability work gets prioritized</h2>
+  <p>
+    When downtime is only measured by its direct hours, reliability investments get judged against an
+    artificially small number — and a lot of genuinely good projects fail to clear that bar. Redundant
+    equipment, condition monitoring, or a more thorough spare-parts strategy can look expensive against
+    "12 hours of downtime a quarter," and completely justified against the real number that includes
+    scrap, expedited freight, and the overtime spent chasing the schedule back.
+  </p>
+  <p>
+    This doesn't require a perfect accounting system. It requires asking a better question after every
+    significant breakdown: not just how long were we down, but what else did this cost that never made
+    it onto the report? Even a rough estimate — flagged, not perfectly quantified — changes the
+    conversation about which failures actually deserve engineering attention.
+  </p>
+
+  <h2>A simple habit that closes most of the gap</h2>
+  <p>
+    Add three questions to every significant breakdown review, alongside the standard downtime entry:
+  </p>
+  <ol>
+    <li>Did the restart produce measurable scrap or rework, and how much?</li>
+    <li>Did this delay affect a customer commitment or require expedited action to recover?</li>
+    <li>Did any other equipment run abnormally because of this event?</li>
+  </ol>
+  <p>
+    None of these need to be perfectly precise to be useful. Even a rough "yes, roughly this much"
+    answer, tracked consistently, turns the downtime log from a partial record into something close to
+    the truth — and gives reliability engineering the real number it needs to make its case.
+  </p>
+
+</div>
+
+<div class="article-footer-nav">
+  <a href="../index.html">← Back to Reliability &amp; Controls Insight</a>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>© <span id="year"></span> Reliability &amp; Controls Insight</span>
+    <span>Written by Juan Díaz</span>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

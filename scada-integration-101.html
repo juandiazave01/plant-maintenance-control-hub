@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCADA Integration 101 — Reliability &amp; Controls Insight</title>
+<meta name="description" content="PLCs collect the truth about your line every scan cycle. Most of it never reaches anyone who could act on it. How SCADA closes that gap, and where integrations usually break.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-top">
+    <span>Field notes on plant reliability &amp; industrial control</span>
+    <span>Vol. 01</span>
+  </div>
+  <div class="masthead-main">
+    <a href="../index.html" class="wordmark">Reliability <span class="wordmark-accent">&amp;</span> Controls Insight</a>
+    <nav class="masthead-nav">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#maintenance">Maintenance</a>
+      <a href="../index.html#controls">Controls &amp; SCADA</a>
+      <a href="../index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header">
+  <span class="article-tag tag-controls">Controls &amp; SCADA</span>
+  <h1 class="article-title">SCADA Integration 101: Connecting the Plant Floor to the Business</h1>
+  <p class="article-dek">
+    Your PLCs already know exactly what's happening on the line, every scan cycle. Most of that
+    knowledge never reaches anyone who could act on it. That's the gap SCADA exists to close.
+  </p>
+  <div class="article-byline">
+    <span>Juan Díaz</span>
+    <span>·</span>
+    <span>Controls &amp; SCADA</span>
+    <span>·</span>
+    <span>8 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>
+    A PLC doesn't have an opinion about who needs its data. It scans its logic, updates its I/O, and
+    moves on — thousands of times a minute, whether or not anyone is watching. Left on its own, all
+    of that information lives and dies inside the controller. SCADA is the layer that decides which of
+    it gets seen, stored, and acted on by a human or another system.
+  </p>
+  <p>
+    Done well, that's the difference between an operator noticing a trend before it becomes a
+    breakdown, and a plant manager finding out about a quality issue from a customer complaint three
+    weeks later. Done poorly, SCADA becomes an expensive screen that mirrors what an operator can
+    already see by walking to the machine.
+  </p>
+
+  <h2>What SCADA is actually doing</h2>
+  <p>
+    Strip away the vendor branding and a SCADA system is doing four jobs at once:
+  </p>
+  <ul>
+    <li><strong>Visualization</strong> — turning raw tags into something a human can read at a glance:
+      trends, alarms, mimic diagrams of the actual process.</li>
+    <li><strong>Historian</strong> — recording what happened over time, so a fault three shifts ago can
+      still be investigated today.</li>
+    <li><strong>Alarming</strong> — telling the right person, at the right time, that something needs
+      attention before it becomes a failure.</li>
+    <li><strong>Bridge to the business layer</strong> — feeding production counts, downtime reasons,
+      and quality data to the systems that run scheduling, reporting, and increasingly, AI-assisted
+      analysis.</li>
+  </ul>
+  <p>
+    That fourth job is where SCADA earns its budget. A control system that only displays data to the
+    people already standing next to the machine is solving a much smaller problem than the plant
+    actually has.
+  </p>
+
+  <p class="pull-quote">
+    The PLC always knew. The question SCADA answers is whether anyone else ever finds out in time to
+    do something about it.
+  </p>
+
+  <h2>Where integrations usually break</h2>
+  <p>
+    Most SCADA projects don't fail because the software can't do the job. They fail in the planning
+    decisions made before a single tag gets configured.
+  </p>
+
+  <h3>Tag naming with no standard</h3>
+  <p>
+    Every line ends up with its own naming convention because no one wrote one down at the start. Six
+    months in, nobody can write a cross-line report without a translation table in their head. A tag
+    naming standard is boring to write and expensive to skip.
+  </p>
+
+  <h3>Historian data nobody asked for</h3>
+  <p>
+    It's tempting to historize every tag "just in case." That fills a database with noise, slows
+    queries, and buries the handful of tags that actually drive decisions. The better question for
+    every tag is: what decision would change if we had this data? If there's no answer, it doesn't
+    need a historian.
+  </p>
+
+  <h3>Treating OT/IT security as an afterthought</h3>
+  <p>
+    Connecting a control network to the business network without a plan for segmentation is how a
+    single infected office laptop ends up on the same broadcast domain as a safety PLC. Segmentation,
+    firewalls between OT and IT zones, and a policy for remote access need to be part of the original
+    architecture, not a project added after an incident.
+  </p>
+
+  <h3>No owner for the data model after go-live</h3>
+  <p>
+    A SCADA system is never really "done." Lines get added, equipment gets replaced, tags drift out of
+    date. Without someone responsible for keeping the tag database and documentation current, the
+    system degrades quietly until nobody trusts it enough to use it for decisions.
+  </p>
+
+  <div class="stat-callout">
+    <div class="stat">
+      <span class="stat-value">4</span>
+      <span class="stat-label">Jobs a SCADA layer does at once</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">1</span>
+      <span class="stat-label">Tag naming standard, decided before go-live</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">0</span>
+      <span class="stat-label">Acceptable delay on OT/IT segmentation planning</span>
+    </div>
+  </div>
+
+  <h2>A practical path to doing it right</h2>
+  <p>
+    If you're planning a SCADA rollout or rescuing one that's drifted, the same sequence works on
+    almost every project:
+  </p>
+  <ol>
+    <li><strong>Start with the assets that drive the most downtime or risk</strong>, not the easiest
+      ones to wire up. The first rollout should prove value where it's most visible.</li>
+    <li><strong>Write the tag naming and data model standard before configuring a single screen.</strong>
+      It's the document every future integration will thank you for.</li>
+    <li><strong>Design the network architecture with segmentation from day one</strong> — treat the OT
+      network as its own zone with controlled, logged access points to IT.</li>
+    <li><strong>Decide what gets historized based on decisions, not convenience.</strong> Fewer,
+      well-chosen tags beat thousands of tags nobody queries.</li>
+    <li><strong>Assign an owner for the system after go-live.</strong> SCADA that nobody maintains is a
+      SCADA system slowly becoming a screen nobody trusts.</li>
+  </ol>
+  <p>
+    None of this is exotic. It's mostly discipline applied before the exciting part of the project
+    starts. The plants that get SCADA right aren't the ones with the newest software — they're the
+    ones that treated the boring planning decisions as seriously as the visualization everyone wants
+    to show off.
+  </p>
+
+</div>
+
+<div class="article-footer-nav">
+  <a href="../index.html">← Back to Reliability &amp; Controls Insight</a>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>© <span id="year"></span> Reliability &amp; Controls Insight</span>
+    <span>Written by Juan Díaz</span>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

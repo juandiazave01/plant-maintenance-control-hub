@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Preventive Maintenance Programs Quietly Fail — Reliability &amp; Controls Insight</title>
+<meta name="description" content="PM completion rates can look great on a dashboard and still leave equipment failing on schedule. Here's why compliance isn't the same as effectiveness.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-top">
+    <span>Field notes on plant reliability &amp; industrial control</span>
+    <span>Vol. 01</span>
+  </div>
+  <div class="masthead-main">
+    <a href="../index.html" class="wordmark">Reliability <span class="wordmark-accent">&amp;</span> Controls Insight</a>
+    <nav class="masthead-nav">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#maintenance">Maintenance</a>
+      <a href="../index.html#controls">Controls &amp; SCADA</a>
+      <a href="../index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header">
+  <span class="article-tag">Maintenance</span>
+  <h1 class="article-title">Why Preventive Maintenance Programs Quietly Fail</h1>
+  <p class="article-dek">
+    PM completion rates can look great on a KPI dashboard and still leave equipment failing on
+    schedule. Compliance and effectiveness are not the same number.
+  </p>
+  <div class="article-byline">
+    <span>Juan Díaz</span>
+    <span>·</span>
+    <span>Maintenance</span>
+    <span>·</span>
+    <span>7 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>
+    Walk into most plants and ask how the preventive maintenance program is doing, and you'll get a
+    number: 92% completion, maybe 95% on a good month. It sounds like a program that's working. Then
+    you look at the breakdown log for the same period and the same motors, the same gearboxes, the
+    same recurring faults are still showing up — on schedule, almost like clockwork.
+  </p>
+  <p>
+    That contradiction isn't a data problem. It's a definition problem. A completed PM task and an
+    effective one are two different things, and most maintenance organizations only measure the
+    first.
+  </p>
+
+  <h2>The compliance trap</h2>
+  <p>
+    PM completion percentage answers one question: did a technician sign off on the task within the
+    scheduled window? It says nothing about whether the task actually addressed how that piece of
+    equipment fails. A lubrication route can be 100% complete and still miss a bearing that's failing
+    from misalignment, not lack of grease. An inspection checklist can be fully signed off by someone
+    who was never taught what a developing fault actually looks or sounds like.
+  </p>
+  <p>
+    Completion rate is easy to measure, so it becomes the metric everyone reports up the chain. Task
+    quality is harder to measure, so it quietly stops being asked about. Over time, the program
+    optimizes for the number that's visible instead of the outcome that matters.
+  </p>
+
+  <p class="pull-quote">
+    A PM task that doesn't match the equipment's actual failure mode isn't preventing anything —
+    it's just paperwork with a due date.
+  </p>
+
+  <h2>Where the tasks themselves go wrong</h2>
+  <p>
+    Most legacy PM programs were built once, years ago, often copied from an OEM manual or a previous
+    plant, and never revised against what actually breaks. That creates a few predictable failure
+    patterns:
+  </p>
+  <ul>
+    <li><strong>Time-based tasks on equipment that fails on condition, not time.</strong> Changing a
+      component every 90 days regardless of how it's actually wearing either wastes good parts or
+      misses a failure that develops faster than the interval.</li>
+    <li><strong>Generic tasks that don't reflect the specific failure mode.</strong> "Inspect motor"
+      isn't a task — it doesn't tell a technician what a bad bearing sounds like versus a winding
+      problem versus a coupling issue.</li>
+    <li><strong>No feedback loop from breakdowns back into the PM list.</strong> When a failure
+      happens, the PM program should get updated. In most plants, the breakdown gets fixed and the
+      PM list stays exactly as it was.</li>
+    <li><strong>Task overload.</strong> When technicians are handed more PM tasks than there's time to
+      do properly, quality quietly drops first, and completion rate becomes the only thing that
+      survives.</li>
+  </ul>
+
+  <div class="stat-callout">
+    <div class="stat">
+      <span class="stat-value">↑</span>
+      <span class="stat-label">PM completion %</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">→</span>
+      <span class="stat-label">Breakdown rate, unchanged</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">↓</span>
+      <span class="stat-label">Program credibility on the floor</span>
+    </div>
+  </div>
+
+  <h2>What effective PM actually requires</h2>
+  <p>
+    Fixing this isn't about doing more PM — it's about making sure the PM that exists is pointed at
+    real failure modes. A few practices consistently separate programs that reduce failures from
+    programs that just generate paperwork:
+  </p>
+
+  <h3>Build tasks from failure modes, not manufacturer defaults</h3>
+  <p>
+    An FMEA — even an informal one built from a maintenance team's own history — tells you how a
+    piece of equipment actually fails on your line, under your conditions. That's a better starting
+    point for a PM task than a generic OEM interval, which is usually written to avoid warranty
+    claims, not to match your operating environment.
+  </p>
+
+  <h3>Close the loop after every failure</h3>
+  <p>
+    Every unplanned breakdown is a data point about a gap in the PM program — either a missing task,
+    a wrong interval, or a task that isn't specific enough to catch what actually happened. If that
+    breakdown doesn't change the PM list, the same gap will produce the same failure again.
+  </p>
+
+  <h3>Add condition-based checks where they earn their cost</h3>
+  <p>
+    Not everything needs vibration analysis or thermography. But for the assets that drive the most
+    downtime, condition monitoring catches developing faults that a fixed-interval inspection will
+    walk past. The goal isn't to monitor everything — it's to monitor what actually matters and use
+    time-based PM everywhere else.
+  </p>
+
+  <h3>Audit task quality, not just task completion</h3>
+  <p>
+    Occasionally follow a technician through a PM route and ask what they're actually checking and
+    why. It surfaces two things fast: tasks that no longer make sense for the equipment as installed,
+    and technicians who were never properly trained on what the task is supposed to catch.
+  </p>
+
+  <h2>The number that actually matters</h2>
+  <p>
+    Completion rate isn't a bad metric — it's an incomplete one. The plants that get real reliability
+    improvement out of their PM program track a second number alongside it: how many of the
+    breakdowns that happened this month were on equipment covered by a PM task that should have
+    caught the failure mode. That number is uncomfortable to report. It's also the one that tells you
+    whether the program is actually working.
+  </p>
+
+</div>
+
+<div class="article-footer-nav">
+  <a href="../index.html">← Back to Reliability &amp; Controls Insight</a>
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>© <span id="year"></span> Reliability &amp; Controls Insight</span>
+    <span>Written by Juan Díaz</span>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
